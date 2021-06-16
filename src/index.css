@@ -11,3 +11,88 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+div {
+  display: block
+}
+
+video, .wellerman, .rabbit-lyrics {
+  height: 232px;
+  margin: 0 12px 20px 0;
+  vertical-align: top;
+  width: calc(30em - 10px);
+}
+
+video:last-of-type {
+  margin: 0 0 20px 0;
+}
+
+.wellerman, .rabbit-lyrics {
+  display: inline-block
+}
+
+button {
+  margin: 0 3px 10px 0;
+  padding-left: 2px;
+  padding-right: 2px;
+  min-width: 99px;
+}
+
+button:last-of-type {
+  margin: 0;
+}
+
+.rabbit-lyrics {
+  position: relative; /* Must be relative, otherwise cannot calculate offset */
+  padding: 1em 0;
+  height: 16.5em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+.rabbit-lyrics--center {
+  text-align: center;
+}
+
+.rabbit-lyrics--left {
+  text-align: left;
+}
+
+.rabbit-lyrics--right {
+  text-align: right;
+}
+
+.rabbit-lyrics__line {
+  line-height: 1.5em;
+  min-height: 1.5em;
+  padding: 0 1em;
+}
+
+.rabbit-lyrics__line--active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.rabbit-lyrics__inline--active {
+  color: #04a8a8;
+}
+
+
+
+@media (max-width: 500px) {
+  button {
+    font-size: 0.8em;
+    width: calc(33% - 5px);
+  }
+}
+
+@media (max-width: 720px) {
+  video {
+    height: calc((50vw - 48px) * 3 / 4);
+    margin: 0 10px 10px 0;
+    width: calc(50vw - 48px);
+  }
+
+}
