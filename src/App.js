@@ -40,6 +40,7 @@ const App = () => {
     playbackRef.current.load()
     wellermanRef.current.currentTime = 0
     wellermanRef.current.play();
+    wellermanRef.current.scrollIntoView()
     var options = {
       audioBitsPerSecond : 128000,
       videoBitsPerSecond : 2500000,
@@ -195,7 +196,7 @@ const App = () => {
       <br />
       <div style={{display: showKaraoke ? 'none' : 'block' }} >
         <img 
-          width="500"
+          className="pirate-flag"
           src="./flag.png" 
           alt="Pirate Flag" />
         <p>
@@ -246,17 +247,17 @@ const App = () => {
         )}
         <hr />
         <div className="wellerman">
+          <font style={{fontSize: 'x-small'}}>Note: On mobile, click the video below to start.</font><br />
           <video 
             ref={wellermanRef} 
-            controls 
             width="300" 
             src="./wellerman.mp4" 
             playsInline 
             onLoadedData={handleLoaded}
             onEnded={handleStopCaptureClick}
             /> 
-          Credits:<br /> Nathan Evans - Wellerman (TikTok Sea Shanty) | Official Audio 
-          
+          <br />
+          Credits:<br /> Nathan Evans - Wellerman
         </div>
         <div className="rabbit-lyrics" ref={lyricsRef} style={{display: loaded ? 'inline-block' : 'none' }} dangerouslySetInnerHTML={{ __html: lyrics }}>
         </div>

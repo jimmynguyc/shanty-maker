@@ -21,6 +21,7 @@ video, .wellerman, .rabbit-lyrics {
   margin: 0 12px 0 0;
   vertical-align: top;
   width: calc(30em - 10px);
+  max-width: 100%;
 }
 
 video:last-of-type {
@@ -40,6 +41,11 @@ button {
 
 button:last-of-type {
   margin: 0;
+}
+
+img.pirate-flag {
+  width: 80%;
+  max-width: 500px;
 }
 
 .rabbit-lyrics {
@@ -90,9 +96,9 @@ button:last-of-type {
 
 @media (max-width: 720px) {
   video {
-    height: calc((50vw - 48px) * 3 / 4);
+    height: calc(50vw * 3 / 4);
     margin: 0 10px 10px 0;
-    width: calc(50vw - 48px);
+    width: calc(50vw);
   }
 
 }
