@@ -3,6 +3,7 @@ import React from 'react';
 import Webcam from 'react-webcam';
 import RabbitLyrics from 'rabbit-lyrics';
 
+
 const App = () => {
   const webcamRef = React.useRef(null);
   const playbackRef = React.useRef(null);
@@ -208,7 +209,6 @@ const App = () => {
           It be the only way to go I tell ye'all. So quit ya blabberin' an' begin doin'.
         </p>
         <br />
-        <button onClick={setShowKaraoke}>Aye aye Cap'n</button>
       </div>
       <div style={{display: showKaraoke ? 'block' : 'none' }} >
         <Webcam 
@@ -247,7 +247,6 @@ const App = () => {
         )}
         <hr />
         <div className="wellerman">
-          <font style={{fontSize: 'x-small'}}>Note: On mobile, click the video below to start.</font><br />
           <video 
             ref={wellermanRef} 
             width="300" 
