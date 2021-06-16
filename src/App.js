@@ -184,6 +184,12 @@ const App = () => {
   [02:28.00] One day, when the tonguing is done
   [02:30.00] We'll take our leave and go  
   `
+
+  const handleError = () => {
+    console.log('error')
+    alert('MediaRecorder is not supported by this browser. Please use Firefox.');
+  }
+
   return (
     <div className="App">
       <br />
@@ -207,11 +213,16 @@ const App = () => {
         <Webcam 
           height={720}
           ref={webcamRef} 
-          videoConstraints={videoConstraints} />
+          videoConstraints={videoConstraints} 
+          onUserMediaError={handleError}
+          />
         <video 
           height={720}
           ref={playbackRef} 
           autoPlay loop playsInline />
+        <br />
+        <font style={{fontSize: 'x-small'}}>Note: Use Firefox if you don't see anything</font>
+        <br />
         <br />
         {loaded ? (
           <>

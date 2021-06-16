@@ -1,0 +1,9 @@
+name = "shanty-maker"
+type = "webpack"
+account_id = "2a4efa290b7865420c1ad7a62f3c7b12"
+workers_dev = true
+route = ""
+zone_id = ""
+
+[site]
+bucket = "./public"
