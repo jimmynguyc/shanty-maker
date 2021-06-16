@@ -251,11 +251,13 @@ const App = () => {
           <video 
             ref={wellermanRef} 
             width="300" 
-            src="./wellerman.mp4" 
             playsInline 
+            controls
             onLoadedData={handleLoaded}
             onEnded={handleStopCaptureClick}
-            /> 
+            >
+              <source src="./wellerman.mp4" type="video/mp4" />
+            </video> 
           <br />
           Credits:<br /> Nathan Evans - Wellerman
         </div>
